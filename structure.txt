@@ -1,0 +1,10 @@
+- Login/Cadastro/Landing
+- Dashboard
+    - estatísticas
+        - Km restantes até a próxima troca de óleo
+        - Média de consumo
+        - Próximas manutenções previstas
+    - ofertas de veículos
+    - oficinas por perto
+- Cadastro de Veículo
+- Cadastro de oficina
