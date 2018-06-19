@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import VeiculoInfo from "./components/veiculo_info";
+import VeiculoInfo from "./components/card";
 import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css";
+import "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
 
 const Motos = {
   Factor: {
@@ -25,8 +27,10 @@ class App extends Component {
 		return Object.entries(Motos).map(([key, value], i) => {
 			return (
 				<div key={key}>
+        <div className="card">
 					Modelo: {value.propriedades.modelo}
-					Fabricante: {value.propriedades.fabricante}
+          Fabricante: {value.propriedades.fabricante}
+          </div>
 				</div>
 			)
 		})
