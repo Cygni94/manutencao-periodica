@@ -8,3 +8,4 @@
     - oficinas por perto
 - Cadastro de Veículo
 - Cadastro de oficina
+- Página de veículos cadastrados
