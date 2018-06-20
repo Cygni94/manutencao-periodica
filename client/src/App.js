@@ -27,7 +27,7 @@ class App extends Component {
         return (
             <div>
                 <h1>Testando</h1>
-                <p>{this.state.veiculos.modelo}</p>
+                <p>{this.state.veiculos.data}</p>
             </div>
         );
     }
