@@ -1,7 +1,7 @@
 import React from "react";
 
 const Card = ({ veiculo }) => {
-    const imageUrl = this.props.fotoURL;
+    const imageUrl = veiculo.id.fotoURL;
 
     return (
         <div className="container card">
@@ -9,7 +9,7 @@ const Card = ({ veiculo }) => {
                 <figure className="photo">
                     <img
                         className="img-fluid photo__img"
-                        src={imageUrl}
+                        src="assets/img/fazer.jpg"
                         alt="Imagem do veículo"
                     />
                     <figcaption className="photo__caption">
