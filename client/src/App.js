@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import Card from "./components/card";
+// import Card from "./components/card";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -18,19 +18,23 @@ class App extends Component {
 
     VeiculosList() {
         return;
-        $.getJSON("localhost:3666/").then(({ results }) =>
+        $.getJSON("localhost:3666/moto").then(({ results }) =>
             this.setState({ veiculos: results.json() })
         );
-    }
+    } V@dT#RYQE5y&
 
     render() {
-        return (
+        const veiculos = this.state.veiculos.map((item, i) => (
             <div>
-                <h1>Testando</h1>
-                <p>{this.state.veiculos.data}</p>
+                <h1>{item.data.attributes.modelo}</h1>
+            </div>
+        ));
+
+        return (
+            <div id="layout-content" className="layout-content-wrapper">
+                <div className="panel-list">{veiculos}</div>
             </div>
         );
     }
 }
-
 export default App;
