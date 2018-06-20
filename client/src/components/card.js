@@ -1,13 +1,16 @@
 import React from "react";
 
 const Card = ({ veiculo }) => {
+    const imageUrl = this.props.fotoURL;
+
     return (
         <div className="container card">
             <div className="card__header">
                 <figure className="photo">
                     <img
                         className="img-fluid photo__img"
-                        src="assets/img/factor.jpg"
+                        src={imageUrl}
+                        alt="Imagem do veículo"
                     />
                     <figcaption className="photo__caption">
                         Yamaha Factor 2017

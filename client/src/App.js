@@ -6,23 +6,23 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Motos = {
     Factor: {
-        propriedades: {
-            fotoURL: "assets/img/factor.jpg",
-            fabricante: "Yamaha",
-            modelo: "Factor 125i ED",
-        },
+        fotoURL: "assets/img/factor.jpg",
+        fabricante: "Yamaha",
+        modelo: "Factor 125i ED",
     },
     Fazer: {
-        propriedades: {
-            fotoURL:
-                "https://www.yamaha-motor.com.br/fazer250abs/assets/img/comparativo/fazer.png",
-            fabricante: "Yamaha",
-            modelo: "Fazer 250 ABS",
-        },
+        fotoURL:
+            "https://www.yamaha-motor.com.br/fazer250abs/assets/img/comparativo/fazer.png",
+        fabricante: "Yamaha",
+        modelo: "Fazer 250 ABS",
     },
 };
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     _renderObject() {
         return Object.entries(Motos).map(([key, props], i) => {
             return <Card />;
