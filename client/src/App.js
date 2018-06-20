@@ -26,7 +26,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Card veiculo={this.state.veiculos} />
+                <h1>Testando</h1>
+                <p>{this.state.veiculos.modelo}</p>
             </div>
         );
     }
