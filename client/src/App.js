@@ -1,36 +1,34 @@
 import React, { Component } from "react";
+import $ from "jquery";
 import Card from "./components/card";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap-reboot.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-const Motos = {
-    Factor: {
-        fotoURL: "assets/img/factor.jpg",
-        fabricante: "Yamaha",
-        modelo: "Factor 125i ED",
-    },
-    Fazer: {
-        fotoURL:
-            "https://www.yamaha-motor.com.br/fazer250abs/assets/img/comparativo/fazer.png",
-        fabricante: "Yamaha",
-        modelo: "Fazer 250 ABS",
-    },
-};
-
 class App extends Component {
     constructor(props) {
         super(props);
+
+        this.state = { veiculos: [] };
     }
 
-    _renderObject() {
-        return Object.entries(Motos).map(([key, props], i) => {
-            return <Card />;
-        });
+    componentDidMount() {
+        this.VeiculosList();
+    }
+
+    VeiculosList() {
+        return;
+        $.getJSON("localhost:3666/").then(({ results }) =>
+            this.setState({ veiculos: results.json() })
+        );
     }
 
     render() {
-        return <div className="App">{this._renderObject()}</div>;
+        return (
+            <div>
+                <Card veiculo={this.state.veiculos} />
+            </div>
+        );
     }
 }
 
