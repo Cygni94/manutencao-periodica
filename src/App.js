@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Loadable from "react-loadable";
 import Header from "./components/header";
-import Card from "./components/card";
+//import Card from "./components/card";
 import "./App.css";
 
 const Loading = () => <div>Loading...</div>;
@@ -36,10 +36,7 @@ class App extends Component {
             <Router>
                 <div>
                     <Header />
-                    <Card veiculos={this.state.veiculos} />
-                    <Switch>
-                        <Route path="/veiculos" component={Veiculos} />
-                    </Switch>
+                    {/* <Card veiculos={this.state.veiculos} /> */}
                 </div>
             </Router>
         );
