@@ -6,8 +6,9 @@ import {
     Switch,
     Redirect,
 } from "react-router-dom";
+import Card from "./card";
 
-const Navbar = props => {
+const Navbar = () => {
     return (
         <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light">
