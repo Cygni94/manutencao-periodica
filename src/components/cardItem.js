@@ -2,7 +2,7 @@ import React from "react";
 
 const CardItem = ({ veiculo }) => {
     return (
-        <div key={veiculo.id} className="offset-md-1 col-md-3 card">
+        <div key={veiculo.id} className="col-md-3 card">
             <div className="card__header">
                 <figure className="photo">
                     <img
@@ -10,9 +10,9 @@ const CardItem = ({ veiculo }) => {
                         src={veiculo.fotoURL}
                         alt="Imagem do veículo"
                     />
-                    <figcaption className="photo__caption">
+                    {/* <figcaption className="photo__caption">
                         {veiculo.modelo}
-                    </figcaption>
+                    </figcaption> */}
                 </figure>
             </div>
             <div className="card__body">

@@ -3,7 +3,7 @@ import CardItem from "./cardItem";
 
 const Card = props => {
     const cardItem = props.veiculos.map(veiculo => {
-        return <CardItem veiculo={veiculo} />;
+        return <CardItem key={veiculo.id} veiculo={veiculo} />;
     });
     return (
         <div className="container">
