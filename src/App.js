@@ -1,4 +1,12 @@
 import React, { Component } from "react";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    Redirect,
+} from "react-router-dom";
+import Header from "./components/header";
 import Card from "./components/card";
 import "./App.css";
 
@@ -17,9 +25,15 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-                <Card veiculos={this.state.veiculos} />
-            </div>
+            <Router>
+                <div>
+                    <Header />
+                    <Card veiculos={this.state.veiculos} />
+                    <Switch>
+                        <Route path="/veiculos" component={Card} />
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }

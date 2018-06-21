@@ -17,8 +17,6 @@ const CardItem = ({ veiculo }) => {
             </div>
             <div className="card__body">
                 <h2>{veiculo.modelo}</h2>
-            </div>
-            <div className="card__footer">
                 <div className="row">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
