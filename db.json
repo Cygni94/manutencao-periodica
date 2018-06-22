@@ -14,5 +14,20 @@
         }
     ],
     "usuarios": [{ "id": 1, "nome": "Cristiano Coelho" }],
+    "fabricantes": [
+        {
+            "id": 1,
+            "fabricante": "Yamaha",
+            "modelos": ["Factor 125i ED", "Fazer 250 ABS"]
+        },
+        {
+            "id": 2,
+            "fabricante": "Honda"
+        },
+        {
+            "id": 3,
+            "fabricante": "Volkswagen"
+        }
+    ],
     "profile": { "name": "typicode" }
 }

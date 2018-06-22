@@ -1,33 +1,28 @@
-import React from "react";
-import CadastroMoto from "./cadastro_moto";
+import React, { Component } from "react";
 
-const CadastroVeiculo = props => {
-  const motoCadastro = props.videos.map(video => {
-    return (
-      <div>
-        <ul className="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              Carro
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Moto
-            </a>
-          </li>
-        </ul>
+class CadastroVeiculo extends Component {
+    render() {
+        return (
+            <form className="needs-validation" noValidate>
+                <div className="form-row">
+                    <div className="col-md-4 mb-3">
+                        <label>Marca</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder=""
+                            value=""
+                            required
+                        />
+                    </div>
+                    <select id="fabricantes-dropdown" name="Fabricante" />
+                </div>
+                <button className="btn btn-primary" type="submit">
+                    Cadastrar
+                </button>
+            </form>
+        );
+    }
+}
 
-        <form>
-          <div className="form-group">
-            {/* receber componente cadastro carro ou cadastro moto */}
-          </div>
-        </form>
-      </div>
-    );
-  });
-
-  return <ul className="col-md-4 list-group">{videoItems}</ul>;
-};
-
-//export default VideoList;
+export default CadastroVeiculo;

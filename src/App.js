@@ -6,17 +6,18 @@ import {
     Switch,
     Redirect,
 } from "react-router-dom";
-import Loadable from "react-loadable";
+//import Loadable from "react-loadable";
 import Header from "./components/header";
+import CadastroVeiculo from "./components/cadastro_veiculo";
 //import Card from "./components/card";
 import "./App.css";
 
-const Loading = () => <div>Loading...</div>;
+// const Loading = () => <div>Loading...</div>;
 
-const Veiculos = Loadable({
-    loader: () => import("./components/card"),
-    loading: Loading,
-});
+// const Veiculos = Loadable({
+//     loader: () => import("./components/card"),
+//     loading: Loading,
+// });
 
 class App extends Component {
     constructor(props) {
@@ -34,8 +35,9 @@ class App extends Component {
     render() {
         return (
             <Router>
-                <div>
+                <div className="container">
                     <Header />
+                    <CadastroVeiculo />
                     {/* <Card veiculos={this.state.veiculos} /> */}
                 </div>
             </Router>
