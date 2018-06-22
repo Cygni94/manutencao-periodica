@@ -2,20 +2,7 @@
     "fabricantes": [
         {
             "id": 1,
-            "fabricante": "Yamaha",
-            "modelos": [
-                {
-                    "id": 1,
-                    "modelo": "Factor 125i ED",
-                    "fotoURL": "assets/img/factor125_preta.png"
-                },
-                {
-                    "id": 2,
-                    "modelo": "Fazer 250 ABS",
-                    "fabricante": "Yamaha",
-                    "fotoURL": "assets/img/fazer250_azul.png"
-                }
-            ]
+            "fabricante": "Yamaha"
         },
         {
             "id": 2,
@@ -30,6 +17,20 @@
         {
             "id": 1,
             "nome": "Cristiano Coelho"
+        }
+    ],
+    "modelos": [
+        {
+            "id": 1,
+            "fabricante": 1,
+            "modelo": "Factor 125i ED",
+            "fotoURL": "assets/img/factor125_preta.png"
+        },
+        {
+            "id": 2,
+            "fabricante": 1,
+            "modelo": "Fazer 250 ABS",
+            "fotoURL": "assets/img/fazer250_azul.png"
         }
     ]
 }

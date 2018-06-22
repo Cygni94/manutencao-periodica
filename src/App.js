@@ -27,7 +27,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3666/veiculos`)
+        fetch(`http://localhost:3666/modelos`)
             .then(result => result.json())
             .then(veiculos => this.setState({ veiculos }));
     }
