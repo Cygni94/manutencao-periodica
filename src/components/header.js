@@ -33,22 +33,24 @@ class Header extends Component {
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li className="nav-item">
                                 <Link to="/veiculos">
-                                    <a className="nav-link">Classificados</a>
+                                    <span className="nav-link">
+                                        Classificados
+                                    </span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/veiculos">
-                                    <a className="nav-link">Oficinas</a>
+                                    <span className="nav-link">Oficinas</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/veiculos">
-                                    <a className="nav-link">Veículos</a>
+                                    <span className="nav-link">Veículos</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/veiculos">
-                                    <a className="nav-link">user</a>
+                                    <span className="nav-link">user</span>
                                 </Link>
                             </li>
                         </ul>

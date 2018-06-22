@@ -1,0 +1,43 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "modelo": "Factor 125i ED",
+      "fabricante": "Yamaha",
+      "fotoURL": "assets/img/factor125_preta.png"
+    },
+    {
+      "id": 2,
+      "modelo": "Fazer 250 ABS",
+      "fabricante": "Yamaha",
+      "fotoURL": "assets/img/fazer250_azul.png"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Cristiano Coelho"
+    }
+  ],
+  "fabricantes": [
+    {
+      "id": 1,
+      "fabricante": "Yamaha",
+      "modelos": [
+        "Factor 125i ED",
+        "Fazer 250 ABS"
+      ]
+    },
+    {
+      "id": 2,
+      "fabricante": "Honda"
+    },
+    {
+      "id": 3,
+      "fabricante": "Volkswagen"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

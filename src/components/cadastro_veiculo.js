@@ -1,28 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 
-class CadastroVeiculo extends Component {
-    render() {
-        return (
-            <form className="needs-validation" noValidate>
-                <div className="form-row">
-                    <div className="col-md-4 mb-3">
-                        <label>Marca</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder=""
-                            value=""
-                            required
-                        />
-                    </div>
-                    <select id="fabricantes-dropdown" name="Fabricante" />
+const CadastroVeiculos = ({ fabricantes }) => {
+    const fabricanteOption = fabricantes.map(fabricante => {
+        return <option key={fabricante.id}>{fabricante}</option>;
+    });
+    return (
+        <form className="needs-validation" noValidate>
+            <div className="form-row">
+                <div className="col-md-4 mb-3">
+                    <label>Marca</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder=""
+                        value=""
+                        required
+                    />
                 </div>
-                <button className="btn btn-primary" type="submit">
-                    Cadastrar
-                </button>
-            </form>
-        );
-    }
-}
+                <select>{fabricanteOption}</select>
+            </div>
+            <button className="btn btn-primary" type="submit">
+                Cadastrar
+            </button>
+        </form>
+    );
+};
 
-export default CadastroVeiculo;
+export default CadastroVeiculos;
