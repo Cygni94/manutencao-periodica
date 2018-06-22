@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 //import Loadable from "react-loadable";
 import Header from "./components/header";
-import CadastroVeiculo from "./components/cadastro_veiculo";
-//import Card from "./components/card";
+//import CadastroVeiculo from "./components/cadastro_veiculo";
+import Card from "./components/card";
 import "./App.css";
 
 // const Loading = () => <div>Loading...</div>;
@@ -37,8 +37,8 @@ class App extends Component {
             <Router>
                 <div className="container">
                     <Header />
-                    <CadastroVeiculo />
-                    {/* <Card veiculos={this.state.veiculos} /> */}
+                    {/* <CadastroVeiculo /> */}
+                    <Card veiculos={this.state.veiculos} />
                 </div>
             </Router>
         );
