@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 //import Loadable from "react-loadable";
 import Header from "./components/header";
-//import CadastroVeiculo from "./components/cadastro_veiculo";
+import CadastroVeiculo from "./components/cadastro_veiculo";
 import Card from "./components/card";
 import "./App.css";
 
@@ -23,7 +23,13 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { veiculos: [] };
+        this.state = { veiculos: [], fabricantes: [] };
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:3666/fabricantes`)
+            .then(result => result.json())
+            .then(fabricantes => this.setState({ fabricantes }));
     }
 
     componentDidMount() {
@@ -37,7 +43,7 @@ class App extends Component {
             <Router>
                 <div className="container">
                     <Header />
-                    {/* <CadastroVeiculo /> */}
+                    <CadastroVeiculo fabricantes={this.state.fabricantes} />
                     <Card veiculos={this.state.veiculos} />
                 </div>
             </Router>

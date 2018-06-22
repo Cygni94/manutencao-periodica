@@ -1,9 +1,9 @@
 import React from "react";
 
 const CadastroVeiculos = ({ fabricantes }) => {
-    // const fabricanteOption = fabricantes.map(fabricante => {
-    //     return <option key={fabricante.id}>{fabricante}</option>;
-    // });
+    const fabricanteOption = fabricantes.map(fabricante => {
+        return <option key={fabricante.id}>{fabricante}</option>;
+    });
     return (
         <form className="needs-validation" noValidate>
             <div className="form-row">
@@ -17,7 +17,7 @@ const CadastroVeiculos = ({ fabricantes }) => {
                         required
                     />
                 </div>
-                {/* <select>{fabricanteOption}</select> */}
+                <select>{fabricanteOption}</select>
             </div>
             <button className="btn btn-primary" type="submit">
                 Cadastrar
