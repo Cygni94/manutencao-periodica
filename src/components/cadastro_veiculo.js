@@ -2,29 +2,28 @@ import React from "react";
 
 const CadastroVeiculos = props => {
     const fabricanteOption = props.veiculos.map(veiculo => {
-        return <option key={veiculo.id}>{veiculo.modelo}</option>;
+        return <option key={veiculo.id}>{veiculo.fabricante}</option>;
     });
 
+    //    function conditionalOption(option) {
+    //    const modeloOption = props.veiculos.map(veiculo => {
+    //        if (veiculo.id == 1) {
+    //  return <option key={veiculo.id}>{veiculo.modelo}</option>;
+    //        }
+    //});
+    //    }
+
     return (
-        <form className="needs-validation" noValidate>
-            <div className="form-row">
-                <div className="col-md-4 mb-3">
-                    <label>Marca</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        placeholder=""
-                        value=""
-                        required
-                    />
-                </div>
-                <select>
-                    <option value="Selecione o modelo">
-                        Selecione o modelo
-                    </option>
-                    {fabricanteOption}
-                </select>
+        <form>
+            <div className="col-md-4">
+                <label>Fabricante</label>
+                <input id="fabricante" />
             </div>
+            <div className="col-md-4">
+                <label>Modelo</label>
+                <input id="fabricante" />
+            </div>
+            <br />
             <button className="btn btn-primary" type="submit">
                 Cadastrar
             </button>
