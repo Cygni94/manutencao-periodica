@@ -1,34 +1,107 @@
-import React from "react";
+import React, { Component } from "react";
 
-const CadastroVeiculos = props => {
-    const fabricanteOption = props.veiculos.map(veiculo => {
-        return <option key={veiculo.id}>{veiculo.fabricante}</option>;
-    });
+class CadastroVeiculos extends React.Component {
+    constructor(props) {
+        super(props);
 
-    //    function conditionalOption(option) {
-    //    const modeloOption = props.veiculos.map(veiculo => {
-    //        if (veiculo.id == 1) {
-    //  return <option key={veiculo.id}>{veiculo.modelo}</option>;
-    //        }
-    //});
-    //    }
+        this.state = {
+            tipo: "",
+            fabricante: null,
+            modelo: "",
+            fotoURL: "",
+        };
 
-    return (
-        <form>
-            <div className="col-md-4">
-                <label>Fabricante</label>
-                <input id="fabricante" />
-            </div>
-            <div className="col-md-4">
-                <label>Modelo</label>
-                <input id="fabricante" />
-            </div>
-            <br />
-            <button className="btn btn-primary" type="submit">
-                Cadastrar
-            </button>
-        </form>
-    );
-};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value = target.type === "radio" ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value,
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        fetch(`http://localhost:3666/data`, {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                tipo: this.state.tipo,
+                fabricante: this.state.fabricante,
+                modelo: this.state.modelo,
+                fotoURL: this.state.fotoURL,
+            }),
+        });
+    }
+
+    render() {
+        return (
+            <form onSubmit={this.handleSubmit()}>
+                <fieldset>
+                    <legend>Selecione o tipo de veículo:</legend>
+                    <label>
+                        <input
+                            name="carro"
+                            type="radio"
+                            value="Carro"
+                            checked={this.state.tipo === "Carro"}
+                            onChange={this.handleChange}
+                        />{" "}
+                        Carro
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                            name="moto"
+                            type="radio"
+                            value="Moto"
+                            checked={this.state.tipo === "Moto"}
+                            onChange={this.handleChange}
+                        />{" "}
+                        Moto
+                    </label>
+                    <br />
+                    <label>
+                        Fabricante:
+                        <input
+                            type="text"
+                            value={this.state.fabricante}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Modelo:
+                        <input
+                            type="text"
+                            value={this.state.modelo}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                    <br />
+                    <label>
+                        Caminho da foto:
+                        <input
+                            type="text"
+                            value={this.state.fotoURL}
+                            onChange={this.handleChange}
+                        />
+                    </label>
+                </fieldset>
+                <button type="submit" className="submit-button">
+                    Cadastrar
+                </button>
+            </form>
+        );
+    }
+}
 
 export default CadastroVeiculos;
