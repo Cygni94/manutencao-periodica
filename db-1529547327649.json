@@ -1,25 +1,27 @@
 {
-  "veiculos": [
-    {
-      "id": 1,
-      "modelo": "Factor 125i ED",
-      "fabricante": "Yamaha",
-      "fotoURL": "https://www.yamaha-motor.com.br/upload/produto/182/cor/512/fazer125_preta.jpg"
-    },
-    {
-      "id": 2,
-      "modelo": "Fazer 250 ABS",
-      "fabricante": "Yamaha",
-      "fotoURL": "https://www.yamaha-motor.com.br/fazer250abs/assets/img/comparativo/fazer.png"
+    "veiculos": [
+        {
+            "id": 1,
+            "modelo": "Factor 125i ED",
+            "fabricante": "Yamaha",
+            "fotoURL":
+                "https://www.yamaha-motor.com.br/upload/produto/182/cor/512/fazer125_preta.jpg"
+        },
+        {
+            "id": 2,
+            "modelo": "Fazer 250 ABS",
+            "fabricante": "Yamaha",
+            "fotoURL":
+                "https://www.yamaha-motor.com.br/fazer250abs/assets/img/comparativo/fazer.png"
+        }
+    ],
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "Cristiano Coelho"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
     }
-  ],
-  "usuarios": [
-    {
-      "id": 1,
-      "nome": "Cristiano Coelho"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
 }

@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Switch,
-    Redirect,
-} from "react-router-dom";
-import Card from "./card";
+import Card from "./veiculos_list";
 
 class Header extends Component {
     render() {
@@ -32,26 +25,16 @@ class Header extends Component {
                         id="navbarTogglerDemo03">
                         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li className="nav-item">
-                                <Link to="/veiculos">
-                                    <span className="nav-link">
-                                        Classificados
-                                    </span>
-                                </Link>
+                                <a className="nav-link">Classificados</a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/veiculos">
-                                    <span className="nav-link">Oficinas</span>
-                                </Link>
+                                <a className="nav-link">Oficinas</a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/veiculos">
-                                    <span className="nav-link">Veículos</span>
-                                </Link>
+                                <a className="nav-link">Veículos</a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/veiculos">
-                                    <span className="nav-link">user</span>
-                                </Link>
+                                <a className="nav-link">user</a>
                             </li>
                         </ul>
                     </div>

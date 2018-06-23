@@ -1,22 +1,23 @@
 import React from "react";
 
-const CardItem = ({ veiculo }) => {
+const VeiculoItem = ({ veiculo }) => {
+    const key = veiculo.id;
+    const fotoURL = veiculo.fotoURL;
+    const modelo = veiculo.modelo;
+
     return (
-        <div key={veiculo.id} className="col-md-3 card">
+        <div key={key} className="col-md-3 card">
             <div className="card__header">
                 <figure className="photo">
                     <img
                         className="img-fluid photo__img"
-                        src={veiculo.fotoURL}
+                        src={fotoURL}
                         alt="Imagem do veículo"
                     />
-                    {/* <figcaption className="photo__caption">
-                        {veiculo.modelo}
-                    </figcaption> */}
                 </figure>
             </div>
             <div className="card__body">
-                <h2>{veiculo.modelo}</h2>
+                <h2>{modelo}</h2>
                 <div className="row">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
@@ -41,4 +42,4 @@ const CardItem = ({ veiculo }) => {
     );
 };
 
-export default CardItem;
+export default VeiculoItem;

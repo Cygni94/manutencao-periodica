@@ -1,9 +1,10 @@
 import React from "react";
 
-const CadastroVeiculos = ({ fabricantes }) => {
-    const fabricanteOption = fabricantes.map(fabricante => {
-        return <option key={fabricante.id}>{fabricante}</option>;
+const CadastroVeiculos = props => {
+    const fabricanteOption = props.veiculos.map(veiculo => {
+        return <option key={veiculo.id}>{veiculo.modelo}</option>;
     });
+
     return (
         <form className="needs-validation" noValidate>
             <div className="form-row">
@@ -17,7 +18,12 @@ const CadastroVeiculos = ({ fabricantes }) => {
                         required
                     />
                 </div>
-                <select>{fabricanteOption}</select>
+                <select>
+                    <option value="Selecione o modelo">
+                        Selecione o modelo
+                    </option>
+                    {fabricanteOption}
+                </select>
             </div>
             <button className="btn btn-primary" type="submit">
                 Cadastrar
