@@ -44,7 +44,7 @@ class CadastroVeiculos extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit()}>
+            <form onSubmit={this.handleSubmit}>
                 <fieldset>
                     <legend>Selecione o tipo de veículo:</legend>
                     <label>
