@@ -1,68 +1,26 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "tipo": "moto",
-      "fabricante": "Yamaha",
-      "modelo": "Factor 125i ED",
-      "fotoURL": "assets/img/factor125_preta.png"
-    },
-    {
-      "id": 2,
-      "tipo": "moto",
-      "fabricante": "Yamaha",
-      "modelo": "Fazer 250 ABS",
-      "fotoURL": "assets/img/fazer250_azul.png"
-    },
-    {
-      "firstParam": "fabricantePost",
-      "secondParam": "modeloPost",
-      "id": 3
-    },
-    {
-      "firstParam": "document.querySelector('#fabricante')",
-      "secondParam": "document.querySelector('#modelo')",
-      "id": 4
-    },
-    {
-      "fabricante": "document.querySelector('#fabricante')",
-      "modelo": "document.querySelector('#modelo')",
-      "id": 5
-    },
-    {
-      "tipo": "Moto",
-      "fabricante": "",
-      "modelo": "",
-      "fotoURL": "",
-      "id": 6
-    },
-    {
-      "tipo": "Moto",
-      "fabricante": "",
-      "modelo": "",
-      "fotoURL": "",
-      "id": 7
-    },
-    {
-      "tipo": null,
-      "fabricante": null,
-      "modelo": null,
-      "fotoURL": null,
-      "id": 8
-    },
-    {
-      "tipo": "",
-      "fabricante": null,
-      "modelo": "",
-      "fotoURL": "",
-      "id": 9
-    },
-    {
-      "tipo": "",
-      "fabricante": null,
-      "modelo": "",
-      "fotoURL": "",
-      "id": 10
-    }
-  ]
+    "data": [
+        {
+            "id": 1,
+            "tipo": "moto",
+            "fabricante": "Yamaha",
+            "modelo": "Factor 125i ED",
+            "fotoURL": "assets/img/factor125_preta.png"
+        },
+        {
+            "id": 2,
+            "tipo": "moto",
+            "fabricante": "Yamaha",
+            "modelo": "Fazer 250 ABS",
+            "fotoURL": "assets/img/fazer250_azul.png"
+        },
+        {
+            "tipo": true,
+            "fabricante": "Volkswagen",
+            "modelo": "Spacefox",
+            "fotoURL":
+                "https://www.vw.com.br/content/dam/vw-ngw/vw_pkw/importers/br/models/my18/spacefox/cutouts/Space_Fox_Trendline_Cutout_378x143_1280x484px.png/jcr:content/renditions/original.transform/min/img.png",
+            "id": 3
+        }
+    ]
 }

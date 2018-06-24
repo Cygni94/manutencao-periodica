@@ -5,8 +5,9 @@ class CadastroVeiculos extends React.Component {
         super(props);
 
         this.state = {
+            id: "",
             tipo: "",
-            fabricante: null,
+            fabricante: "",
             modelo: "",
             fotoURL: "",
         };
@@ -17,7 +18,10 @@ class CadastroVeiculos extends React.Component {
 
     handleChange(event) {
         const target = event.target;
-        const value = target.type === "radio" ? target.checked : target.value;
+        const value =
+            target.type === "radio"
+                ? (this.setState.tipo = target.value)
+                : target.value;
         const name = target.name;
 
         this.setState({
@@ -40,6 +44,12 @@ class CadastroVeiculos extends React.Component {
                 fotoURL: this.state.fotoURL,
             }),
         });
+        this.setState({
+            tipo: "",
+            fabricante: "",
+            modelo: "",
+            fotoURL: "",
+        });
     }
 
     render() {
@@ -49,10 +59,9 @@ class CadastroVeiculos extends React.Component {
                     <legend>Selecione o tipo de veículo:</legend>
                     <label>
                         <input
-                            name="carro"
+                            name="tipo"
                             type="radio"
-                            value="Carro"
-                            checked={this.state.tipo === "Carro"}
+                            value="carro"
                             onChange={this.handleChange}
                         />{" "}
                         Carro
@@ -60,10 +69,9 @@ class CadastroVeiculos extends React.Component {
                     <br />
                     <label>
                         <input
-                            name="moto"
+                            name="tipo"
                             type="radio"
-                            value="Moto"
-                            checked={this.state.tipo === "Moto"}
+                            value="moto"
                             onChange={this.handleChange}
                         />{" "}
                         Moto
@@ -72,6 +80,7 @@ class CadastroVeiculos extends React.Component {
                     <label>
                         Fabricante:
                         <input
+                            name="fabricante"
                             type="text"
                             value={this.state.fabricante}
                             onChange={this.handleChange}
@@ -81,6 +90,7 @@ class CadastroVeiculos extends React.Component {
                     <label>
                         Modelo:
                         <input
+                            name="modelo"
                             type="text"
                             value={this.state.modelo}
                             onChange={this.handleChange}
@@ -90,6 +100,7 @@ class CadastroVeiculos extends React.Component {
                     <label>
                         Caminho da foto:
                         <input
+                            name="fotoURL"
                             type="text"
                             value={this.state.fotoURL}
                             onChange={this.handleChange}
