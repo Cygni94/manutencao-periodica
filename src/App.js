@@ -8,10 +8,26 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { veiculos: [] };
+        this.state = {
+            veiculos: [
+                {
+                    id: "",
+                    tipo: "",
+                    fabricante: "",
+                    modelo: "",
+                    fotoURL: "",
+                },
+            ],
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:3666/data`)
+            .then(result => result.json())
+            .then(veiculos => this.setState({ veiculos }));
     }
 
     handleChange(event) {
@@ -43,17 +59,12 @@ class App extends Component {
             }),
         });
         this.setState({
+            id: "",
             tipo: "",
             fabricante: "",
             modelo: "",
             fotoURL: "",
         });
-    }
-
-    componentDidMount() {
-        fetch(`http://localhost:3666/data`)
-            .then(result => result.json())
-            .then(veiculos => this.setState({ veiculos }));
     }
 
     render() {
