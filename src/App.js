@@ -9,6 +9,45 @@ class App extends Component {
         super(props);
 
         this.state = { veiculos: [] };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        const target = event.target;
+        const value =
+            target.type === "radio"
+                ? (this.setState.tipo = target.value)
+                : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value,
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        fetch(`http://localhost:3666/data`, {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                tipo: this.state.tipo,
+                fabricante: this.state.fabricante,
+                modelo: this.state.modelo,
+                fotoURL: this.state.fotoURL,
+            }),
+        });
+        this.setState({
+            tipo: "",
+            fabricante: "",
+            modelo: "",
+            fotoURL: "",
+        });
     }
 
     componentDidMount() {

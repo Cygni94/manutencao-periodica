@@ -4,7 +4,7 @@ class CadastroVeiculos extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        this.props = {
             id: "",
             tipo: "",
             fabricante: "",
@@ -12,44 +12,44 @@ class CadastroVeiculos extends React.Component {
             fotoURL: "",
         };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+        //     this.handleChange = this.handleChange.bind(this);
+        //     this.handleSubmit = this.handleSubmit.bind(this);
+        // }
 
-    handleChange(event) {
-        const target = event.target;
-        const value =
-            target.type === "radio"
-                ? (this.setState.tipo = target.value)
-                : target.value;
-        const name = target.name;
+        // handleChange(event) {
+        //     const target = event.target;
+        //     const value =
+        //         target.type === "radio"
+        //             ? (this.setState.tipo = target.value)
+        //             : target.value;
+        //     const name = target.name;
 
-        this.setState({
-            [name]: value,
-        });
-    }
+        //     this.setState({
+        //         [name]: value,
+        //     });
+        // }
 
-    handleSubmit(event) {
-        event.preventDefault();
-        fetch(`http://localhost:3666/data`, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                tipo: this.state.tipo,
-                fabricante: this.state.fabricante,
-                modelo: this.state.modelo,
-                fotoURL: this.state.fotoURL,
-            }),
-        });
-        this.setState({
-            tipo: "",
-            fabricante: "",
-            modelo: "",
-            fotoURL: "",
-        });
+        // handleSubmit(event) {
+        //     event.preventDefault();
+        //     fetch(`http://localhost:3666/data`, {
+        //         method: "POST",
+        //         headers: {
+        //             Accept: "application/json",
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify({
+        //             tipo: this.state.tipo,
+        //             fabricante: this.state.fabricante,
+        //             modelo: this.state.modelo,
+        //             fotoURL: this.state.fotoURL,
+        //         }),
+        //     });
+        //     this.setState({
+        //         tipo: "",
+        //         fabricante: "",
+        //         modelo: "",
+        //         fotoURL: "",
+        //     });
     }
 
     render() {
@@ -82,7 +82,7 @@ class CadastroVeiculos extends React.Component {
                         <input
                             name="fabricante"
                             type="text"
-                            value={this.state.fabricante}
+                            value={this.props.fabricante}
                             onChange={this.handleChange}
                         />
                     </label>
@@ -92,7 +92,7 @@ class CadastroVeiculos extends React.Component {
                         <input
                             name="modelo"
                             type="text"
-                            value={this.state.modelo}
+                            value={this.props.modelo}
                             onChange={this.handleChange}
                         />
                     </label>
@@ -102,7 +102,7 @@ class CadastroVeiculos extends React.Component {
                         <input
                             name="fotoURL"
                             type="text"
-                            value={this.state.fotoURL}
+                            value={this.props.fotoURL}
                             onChange={this.handleChange}
                         />
                     </label>

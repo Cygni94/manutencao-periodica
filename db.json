@@ -1,26 +1,32 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "tipo": "moto",
-            "fabricante": "Yamaha",
-            "modelo": "Factor 125i ED",
-            "fotoURL": "assets/img/factor125_preta.png"
-        },
-        {
-            "id": 2,
-            "tipo": "moto",
-            "fabricante": "Yamaha",
-            "modelo": "Fazer 250 ABS",
-            "fotoURL": "assets/img/fazer250_azul.png"
-        },
-        {
-            "tipo": true,
-            "fabricante": "Volkswagen",
-            "modelo": "Spacefox",
-            "fotoURL":
-                "https://www.vw.com.br/content/dam/vw-ngw/vw_pkw/importers/br/models/my18/spacefox/cutouts/Space_Fox_Trendline_Cutout_378x143_1280x484px.png/jcr:content/renditions/original.transform/min/img.png",
-            "id": 3
-        }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "tipo": "moto",
+      "fabricante": "Yamaha",
+      "modelo": "Factor 125i ED",
+      "fotoURL": "assets/img/factor125_preta.png"
+    },
+    {
+      "id": 2,
+      "tipo": "moto",
+      "fabricante": "Yamaha",
+      "modelo": "Fazer 250 ABS",
+      "fotoURL": "assets/img/fazer250_azul.png"
+    },
+    {
+      "tipo": true,
+      "fabricante": "Volkswagen",
+      "modelo": "Spacefox",
+      "fotoURL": "https://www.vw.com.br/content/dam/vw-ngw/vw_pkw/importers/br/models/my18/spacefox/cutouts/Space_Fox_Trendline_Cutout_378x143_1280x484px.png/jcr:content/renditions/original.transform/min/img.png",
+      "id": 3
+    },
+    {
+      "tipo": "carro",
+      "fabricante": "ccc",
+      "modelo": "ccc",
+      "fotoURL": "ccc",
+      "id": 4
+    }
+  ]
 }
