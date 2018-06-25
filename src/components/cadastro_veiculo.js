@@ -1,26 +1,23 @@
 import React, { Component } from "react";
-import VeiculosList from "./veiculos_list";
 
 class CadastroVeiculos extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            id: "",
-            tipo: "",
-            fabricante: "",
-            modelo: "",
-            fotoURL: "",
+            veiculos: [
+                {
+                    id: "",
+                    tipo: "",
+                    fabricante: "",
+                    modelo: "",
+                    fotoURL: "",
+                },
+            ],
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    componentDidMount() {
-        fetch(`http://localhost:3666/data`)
-            .then(result => result.json())
-            .then(veiculos => this.setState({ veiculos }));
     }
 
     handleChange(event) {
@@ -52,11 +49,15 @@ class CadastroVeiculos extends React.Component {
             }),
         });
         this.setState({
-            id: "",
-            tipo: "",
-            fabricante: "",
-            modelo: "",
-            fotoURL: "",
+            veiculos: [
+                {
+                    id: "",
+                    tipo: "",
+                    fabricante: "",
+                    modelo: "",
+                    fotoURL: "",
+                },
+            ],
         });
     }
 
@@ -120,16 +121,6 @@ class CadastroVeiculos extends React.Component {
                         Cadastrar
                     </button>
                 </form>
-                <VeiculosList
-                    veiculos={
-                        (this.state = {
-                            id: this.state.id,
-                            fabricante: this.state.fabricante,
-                            modelo: this.state.modelo,
-                            fotoURL: this.state.fotoURL,
-                        })
-                    }
-                />
             </div>
         );
     }
