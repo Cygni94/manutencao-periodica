@@ -120,7 +120,16 @@ class CadastroVeiculos extends React.Component {
                         Cadastrar
                     </button>
                 </form>
-                <VeiculosList veiculos={this.state.veiculos} />
+                <VeiculosList
+                    veiculos={
+                        (this.state = {
+                            id: this.state.id,
+                            fabricante: this.state.fabricante,
+                            modelo: this.state.modelo,
+                            fotoURL: this.state.fotoURL,
+                        })
+                    }
+                />
             </div>
         );
     }
