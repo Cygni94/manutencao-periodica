@@ -1,5 +1,5 @@
 import React from "react";
-import CadastroVeiculos from "./cadastro_veiculo";
+import CadastroVeiculos from "./CadastroVeiculo";
 import VeiculoItem from "./veiculos_item";
 
 const VeiculosList = props => {
