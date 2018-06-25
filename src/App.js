@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/header";
 import CadastroVeiculo from "./components/cadastro_veiculo";
-import VeiculosList from "./components/veiculos_list";
 import "./App.css";
 
 class App extends Component {
@@ -22,7 +21,6 @@ class App extends Component {
             <div className="container">
                 <Header />
                 <CadastroVeiculo veiculos={this.state.veiculos} />
-                <VeiculosList veiculos={this.state.veiculos} />
             </div>
         );
     }

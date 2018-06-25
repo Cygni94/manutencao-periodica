@@ -1,26 +1,56 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "tipo": "moto",
-            "fabricante": "Yamaha",
-            "modelo": "Factor 125i ED",
-            "fotoURL": "assets/img/factor125_preta.png"
-        },
-        {
-            "id": 2,
-            "tipo": "moto",
-            "fabricante": "Yamaha",
-            "modelo": "Fazer 250 ABS",
-            "fotoURL": "assets/img/fazer250_azul.png"
-        },
-        {
-            "tipo": true,
-            "fabricante": "Volkswagen",
-            "modelo": "Spacefox",
-            "fotoURL":
-                "https://www.vw.com.br/content/dam/vw-ngw/vw_pkw/importers/br/models/my18/spacefox/cutouts/Space_Fox_Trendline_Cutout_378x143_1280x484px.png/jcr:content/renditions/original.transform/min/img.png",
-            "id": 3
-        }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "tipo": "moto",
+      "fabricante": "Yamaha",
+      "modelo": "Factor 125i ED",
+      "fotoURL": "assets/img/factor125_preta.png"
+    },
+    {
+      "id": 2,
+      "tipo": "moto",
+      "fabricante": "Yamaha",
+      "modelo": "Fazer 250 ABS",
+      "fotoURL": "assets/img/fazer250_azul.png"
+    },
+    {
+      "tipo": "carro",
+      "fabricante": "Volkswagen",
+      "modelo": "Spacefox",
+      "fotoURL": "https://www.vw.com.br/content/dam/vw-ngw/vw_pkw/importers/br/models/my18/spacefox/cutouts/Space_Fox_Trendline_Cutout_378x143_1280x484px.png/jcr:content/renditions/original.transform/min/img.png",
+      "id": 3
+    },
+    {
+      "tipo": "moto",
+      "fabricante": "mm",
+      "modelo": "mmm",
+      "fotoURL": "m",
+      "id": 4
+    },
+    {
+      "tipo": "moto",
+      "fabricante": "s",
+      "modelo": "s",
+      "fotoURL": "s",
+      "id": 5
+    },
+    {
+      "tipo": "carro",
+      "fabricante": "a",
+      "modelo": "v",
+      "fotoURL": "v",
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "tipo": "moto",
+      "fabricante": "as",
+      "modelo": "as",
+      "fotoURL": "as",
+      "id": 8
+    }
+  ]
 }
