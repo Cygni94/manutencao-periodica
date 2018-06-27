@@ -6610,3 +6610,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .user__icon {
   width: 1rem; }
+
+.itemList__item {
+  text-align: center; }

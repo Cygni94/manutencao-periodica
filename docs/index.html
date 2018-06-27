@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="assets/js/fontawesome.js"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Manutenção Preventiva</title>
 </head>
@@ -27,7 +28,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <img class="user__icon" src="./assets/img/icon/user.svg" alt="">
+              <span class="user__icon">
+                <i class="fas fa-user"></i>
+              </span>
             </a>
           </li>
         </ul>
@@ -36,17 +39,23 @@
   </header>
   <main class="dashboard container">
     <section id="dados-usuario" class="dashboard__userInfo row">
-      <div class="col-md-4">Cristiano Coelho</div>
+      <div class="col-md-4">
+        <h1>Cristiano Coelho</h1>
+      </div>
     </section>
     <hr>
-    <section class="dashboard__veiculosList row">
-      <div class="card col-md-3">
-        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <section class="dashboard__VeiculosList row">
+      <div class="VeiculosList__item card col-md-3">
+        <img class="card-img-top" src="./assets/img/fazer250_azul.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Factor 125i ED</h5>
           <h6>Yamaha</h6>
+
           <a href="#" class="btn btn-dark">
-            <i></i>
+            <i class="fas fa-filter"></i>
+          </a>
+          <a href="#" class="btn btn-dark">
+            <i class="fas fa-clipboard-check"></i>
           </a>
         </div>
       </div>
