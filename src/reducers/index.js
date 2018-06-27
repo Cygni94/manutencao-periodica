@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import VeiculosReducer from "./reducer_veiculos";
 
 const rootReducer = combineReducers({
-    veiculo: VeiculosReducer,
+    veiculos: VeiculosReducer,
 });
 
 export default rootReducer;
