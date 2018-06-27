@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { fetchVeiculos } from "../actions/index";
 
-class CadastroVeiculos extends React.Component {
+class CadastroVeiculos extends Component {
     constructor(props) {
         super(props);
 
@@ -126,4 +129,11 @@ class CadastroVeiculos extends React.Component {
     }
 }
 
-export default CadastroVeiculos;
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchVeiculos }, dispatch);
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(CadastroVeiculos);

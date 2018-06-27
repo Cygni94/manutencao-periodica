@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import ClassificadosList from "./ClassificadosList";
-import OficinasList from "./OficinasList";
-import VeiculosList from "./VeiculosList";
 
 class Header extends Component {
     render() {
@@ -58,13 +54,6 @@ class Header extends Component {
                             </ul>
                         </div>
                     </nav>
-                    <Route exact path="/" component={App} />
-                    <Route
-                        path="/classificados"
-                        component={ClassificadosList}
-                    />
-                    <Route path="/oficinas" component={OficinasList} />
-                    <Route path="/veiculos" component={VeiculosList} />
                 </header>
             </Router>
         );
