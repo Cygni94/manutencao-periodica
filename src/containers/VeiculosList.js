@@ -1,15 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { fetchVeiculos } from "../actions/index";
 import VeiculoItem from "../components/veiculos_item";
 
-const VeiculosList = props => {
-    const veiculoItem = props.veiculos.map(veiculo => {
-        return <VeiculoItem key={veiculo.id} veiculo={veiculo} />;
-    });
-    return (
-        <div className="container">
-            <div className="row">{veiculoItem}</div>
-        </div>
-    );
-};
+class VeiculosList extends Component {
+    componentWillMount() {
+        this.props.fetchVeiculos();
+    }
 
-export default VeiculosList;
+    renderVeiculos() {
+        return this.props.veiculos.map(veiculos => {
+            return <VeiculoItem key={veiculos.id} veiculos={veiculos} />;
+        });
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <div className="row">{this.renderVeiculos()}</div>
+            </div>
+        );
+    }
+}
+
+function mapStateToProps(state) {
+    return { veiculos: state.veiculos };
+}
+
+export default connect(
+    mapStateToProps,
+    { fetchVeiculos }
+)(VeiculosList);
