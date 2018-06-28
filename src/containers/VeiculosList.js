@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import _ from "lodash";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchVeiculos } from "../actions/index";
@@ -10,7 +11,7 @@ class VeiculosList extends Component {
     }
 
     renderVeiculos() {
-        return this.props.veiculos.map(veiculos => {
+        return _.map(this.props.veiculos, veiculos => {
             return <VeiculoItem key={veiculos.id} veiculos={veiculos} />;
         });
     }
