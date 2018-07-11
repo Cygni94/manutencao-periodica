@@ -9,6 +9,7 @@ class App extends Component {
         return (
             <div className="container">
                 <Header />
+                <CadastroVeiculo />
                 <VeiculosList />
             </div>
         );

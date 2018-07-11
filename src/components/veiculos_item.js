@@ -11,7 +11,7 @@ const VeiculoItem = ({ veiculos }) => {
                 <figure className="photo">
                     <img
                         className="img-fluid photo__img"
-                        src={fotoURL}
+                        src="../../../public/assets/img/moto.svg"
                         alt="Imagem do veículo"
                     />
                 </figure>
